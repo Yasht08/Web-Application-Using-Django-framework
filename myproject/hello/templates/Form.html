@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css.css' %}">
+  <title>Registration Form</title>
+</head>
+<body>
+  <form id="registration-form">
+    <div>
+      <label for="full-name">Full Name:</label>
+      <input type="text" id="full-name" name="full-name" required>
+      <span class="status" id="full-name-status"></span>
+    </div>
+    <div>
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" required>
+      <span class="status" id="email-status"></span>
+    </div>
+    <div>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" minlength="8" required>
+    </div>
+    <div>
+      <label for="confirm-password">Confirm Password:</label>
+      <input type="password" id="confirm-password" name="confirm-password" minlength="8" required>
+      <span class="status" id="password-match-status"></span>
+    </div>
+    <div>
+      <label for="dob">Date of Birth (YYYY-MM-DD):</label>
+      <input type="text" id="dob" name="dob" pattern="\d{4}-\d{2}-\d{2}" required>
+      <span class="status" id="age-status"></span>
+    </div>
+    <button type="submit" id="submit-button">Register</button>
+  </form>
+
+  <script src="{% static 'sd.js' %}"></script>
+</body>
+</html>
